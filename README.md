@@ -1,8 +1,8 @@
 # Code Smell & Refactoring
 
 ## Bloaters
-- Long Method
-- Large Class
+- (Too) Long Method         --> Extract Method
+- (Too) Large Class         --> Extract Class
 - Data Clumps
 - Long Parameter List
 - Primitive Obsession

@@ -1,5 +1,4 @@
 <?php
-namespace Bloaters;
 
 use PHPUnit\Framework\TestCase;
 
@@ -20,7 +19,7 @@ class Box {
         return json_encode(["cost" => $cost]);
     }
 }
-
+//
 class RefactoredBox {
 
     public function __construct($unitCost, $height, $width)
@@ -44,16 +43,12 @@ class RefactoredBox {
     {
         return json_encode($cost);
     }
-
 }
 
 Class BoxTest extends TestCase {
     public function testPrintCost()
     {
-        $expectedResponse = '{"cost":140}';
-        $box = new Box(1.4, 10, 10);
-        $refactoredBox = new RefactoredBox(1.4, 10, 10);
-        $this->assertEquals($expectedResponse, $box->serializeCost());
-        $this->assertEquals($expectedResponse, $refactoredBox->serializeCost());
+        $this->assertEquals('{"cost":140}', (new Box(1.4, 10, 10))->serializeCost());
+        $this->assertEquals('{"cost":140}', (new RefactoredBox(1.4, 10, 10))->serializeCost());
     }
 }
