@@ -1,0 +1,10 @@
+{
+    "name": "jody/code-smell-refactoring",
+    "authors": [
+        {
+            "name": "Jody Lognoul",
+            "email": "lognoulj@gmail.com"
+        }
+    ],
+    "require": {}
+}
