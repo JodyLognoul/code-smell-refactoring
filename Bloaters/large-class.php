@@ -43,15 +43,12 @@ class RefactoredPerson {
 }
 
 Class PersonTest extends TestCase {
-    public function testGetTelephoneNumberDetail()
+    public function testDetails()
     {
-        $this->assertEquals(
-            "Aria Stark: 043/79797900",
-            (new Person('Aria Stark', '043', '79797900'))->details()
-        );
-        $this->assertEquals(
-            "Aria Stark: 043/79797900",
-            (new RefactoredPerson('Aria Stark', new Telephone('043', '79797900')))->details()
-        );
+        $expected = "Aria Stark: 043/79797900";
+        $aria = new Person('Aria Stark', '043', '79797900');
+        $ariaRefactored = new RefactoredPerson('Aria Stark', new Telephone('043', '79797900'));
+        $this->assertEquals($expected, $aria->details());
+        $this->assertEquals($expected, $ariaRefactored->details());
     }
 }
