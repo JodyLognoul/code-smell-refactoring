@@ -17,6 +17,7 @@
 `Solution`
 
 > Create a new class and move the relevant fields and methods from the old class into the new class.
+
 > Martin Fowler (http://martinfowler.com/)
 
 ### Data Clumps
