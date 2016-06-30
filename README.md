@@ -17,6 +17,7 @@
 `Solution`
 
 > Create a new class and move the relevant fields and methods from the old class into the new class.
+
 ### Data Clumps
 > This is one of my favorite CodeSmells from the refactoring book. You spot it when you constantly see the same few
   data items passed around together. start and end are a good example of a data clump wanting to be a range.
